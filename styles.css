@@ -1,0 +1,93 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: #FFCBD2;
+}
+
+
+
+.buttons a {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #99797E;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.30em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#FFCBD2;
+    text-align:center;
+    transition: all 0.5s;
+}
+
+.buttons a:hover {
+    color:#000000;
+    background-color:#FFCBD2;
+    box-shadow: 0 0 5px #FFCBD2;
+    border-color: #FFCBD2;
+}
+
+.board-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+
+.cell {
+    width: 140px;
+    height: 140px;
+    border: 1px solid #99797E;
+    box-shadow: 0 0 2px #FFCBD2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 80px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    border-color: #FFCBD2;
+    box-shadow: 0 0 5px #FFCBD2;
+    background-color:rgba(255,203,210, 0.3);
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: 2px solid #99797E;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: 2px solid #99797E;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: 2px solid #99797E;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+    border-bottom: 2px solid #99797E;
+}
+
